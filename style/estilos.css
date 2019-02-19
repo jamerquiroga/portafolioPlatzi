@@ -1,0 +1,347 @@
+/* 
+
+gris oscuro = #1d252c
+gris claro = #626262
+gris oscuro = #1b2127
+celeste = #016fff
+
+- reglas: all
+    - selectores: "header"
+    - declaraciones: 
+        {
+            background:greenyellow;
+        }
+    - propiedades: "background"
+    - valores: "greenyellow"
+
+*/
+
+/* header{
+    background:greenyellow;
+} */
+
+/* Selector de etiquetas: header - section - article - nav */
+
+/* Selector descendente: body header div nav ol li a */
+ 
+/* Selector de clase: .link{}  
+    <li>
+        <a class="link" href="./others/portafolio.html">Portafolio</a>
+    </li>
+    <li>
+        <a class="link" href="#eventos">Experiencia</a>
+    </li>
+                
+*/
+
+/* Selector por id: #portafolio{} */
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: normal;
+    margin: 0;
+}
+
+h1,
+h2, 
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Fjalla One', sans-serif;
+}
+
+h1{
+    font-size: 40px;
+    line-height: 1.5; /*Espacio entre lineas, 1 representa el 100%*/
+    letter-spacing: -.2px; /*20% de un pixel en negativo*/
+    /*text-transform: uppercase; Transforma el texto a todo en mayúsculas, minusculas, etc*/
+    /*text-decoration: dotted;*/
+    color: white;
+    margin: 0;
+}
+h1 strong{
+    color: #016fff;
+}
+
+h2{
+    color: #016fff;
+    text-transform: uppercase;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 40px;
+    
+}
+
+.hero{
+    height: 300px;
+    /* background-image: url('../images/hero.jpg'); */
+    background-color: #1b2127;
+    /* background-size: 500px 300px; */
+    /* background-repeat: no-repeat; */
+    /* background-position-x: right; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-image{
+    object-fit: cover;
+}
+
+.portfolio{
+    background: #fafafa;
+    padding: 20px;
+}
+
+.project{
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 20px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project-title{
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;    
+}
+
+.project-details{
+    width: 500px;
+}
+
+.project-course,
+.project-date,
+.project-url{
+    margin: 10px 0;
+}
+
+.project-description{
+    font-size: 20px;    
+}
+
+.project strong{
+    font-family: 'Fjalla One', sans-serif;    
+}
+
+.project-imageContainer{
+    width: 500px;
+}
+
+div{
+    display: block;
+}
+
+.header{
+    background-color: #1d252c;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+}
+
+figure{
+    margin: 0;
+}
+
+.menu{
+    height: inherit;
+}
+
+.header ol{
+    display: flex;
+    height: inherit; /*Toma el valor de alto del padre*/
+}
+
+.header ol li{
+    height: inherit;
+}
+
+.header a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: inherit;
+    padding: 0 10px;
+}
+ol,
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flexbox{
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap; /*propiedad que mueve elementos que no caigan en la pantalla a la siguiente línea*/
+    align-items: center; /*centra el contenido en el eje x*/
+    flex-direction: column;
+    justify-content: center; /*centra el contenido en el eje y*/
+    
+    /*
+    Propiedad que alinea el contenido, centrado, izquierda, derecha, abajo, arriba 
+    Ejemplos: flex-end, 
+    -- Conbinación para hacer esto |o        o|
+    align-items: center;
+    justify-content: space-between;
+
+    HORIZONTAL
+    space-between: un elemento pegado hacia la derecha e izquierda |o o o o o|
+    space-evenly: mismo espaceado entre todos | o o o o o o |
+    space-around: espaceado entre todos los elementos, suma el de izquierda y derecha, | o  o  o  o  o |
+    VERTICAL
+    align-items:center, centra el contenido en el eje Y
+    flex-direction: column
+    */
+
+}
+
+.box{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border: 1px solid red;
+    flex-shrink: 0; /*propiedad que indica cuanto es el rango en el que la caja se puede reducir, en este caso queremos que mantenga su tamaño*/
+}
+
+.footer{
+    background: #1d252c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.footer img {
+    vertical-align: middle;
+}
+
+.footer a{
+    color: white;
+}
+
+.event{
+    margin: 10px;
+    width: 480px;
+    border-radius: 10px;
+    overflow: hidden; /* Propiedad que oculta el contenido si se desborda del tamaño del padre*/
+    background: #f4fbff;
+}
+.event-list{
+    display: flex;
+    flex-wrap: wrap; /*Propiedad que hace que solo se muestren los elementos que caigan en una fila, los demás pasan a la siguiente fila*/
+}
+
+.event-image{
+    width: 480px; /*Otra forma de hacerlo es heredado el tamaño del padre*/
+    height: 200px;
+    object-fit: cover; /*Propiedad que maneja el como se va a acomodar la imagen*/
+}
+
+.event-detail{
+    margin: 20px 40px;
+    margin-top: -40px;
+    background-color: white;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+
+.event-url{
+    color: #016fff;
+    border: 1px solid;
+    padding: 5px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.event-list-title{
+    margin-left: 20px;
+}
+
+.contact{
+    background: #016fff;
+    color: white;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social{
+    
+}
+
+.social-link{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+}
+
+.social-link.twitter{
+    background: url('../images/twitter.svg');
+    background-size: 50px 50px;
+}
+
+.social-link.facebook{
+    background: url('../images/facebook.svg');
+    background-size: 50px 50px;
+}
+
+.social-link.github{
+    background: url('../images/github.svg');
+    background-size: 50px 50px;
+}
+
+.social-link.instagram{
+    background: url('../images/instagram.svg');
+    background-size: 50px 50px;
+}
+
+.form-email input{
+    border-color: gray;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px 20px 10px 25px;
+    background-image: url('../images/envelope.svg');
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 5px; 
+}
+.form-email button{
+    display: block; /* Esta propiedad hace que se agregen elementos uno debajo de otro*/
+    background: transparent;
+    color: white;
+    padding: 10px 0;
+    border-radius: 5px;
+    width: 100px;
+    margin-top: 10px;
+}
+
+.form-email h3{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container{
+    width: 1000px;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+    flex-wrap: inherit;
+}
+
+
+
